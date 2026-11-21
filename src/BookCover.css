@@ -1,0 +1,702 @@
+/* ==========================================================================
+   Romantic Luxury Book Cover Styling — White & Deep Navy Blue Theme
+   ========================================================================== */
+
+.bk-stage {
+  perspective: 2000px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Ambient Floating Starlight Sparkles */
+.bk-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bk-ambient-sparkle {
+  position: absolute;
+  color: #93c5fd;
+  text-shadow: 0 0 10px rgba(147, 197, 253, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+  user-select: none;
+}
+
+/* 3D Container & Wrapper */
+.bk-container {
+  position: relative;
+  z-index: 10;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bk-wrapper {
+  position: relative;
+  width: min(360px, 86vw);
+  height: min(520px, 76vh);
+  height: min(520px, 76svh);
+  transform-style: preserve-3d;
+  cursor: default;
+}
+
+/* 3D Ground Ambient Shadow */
+.bk-depth-shadow {
+  position: absolute;
+  left: 6%;
+  right: 2%;
+  bottom: -38px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(10, 25, 47, 0.75) 0%, rgba(15, 23, 42, 0.35) 50%, transparent 75%);
+  filter: blur(10px);
+  transform-origin: center center;
+}
+
+/* Sapphire Silk Ribbon Bookmark */
+.bk-ribbon {
+  position: absolute;
+  right: 46px;
+  bottom: -40px;
+  width: 18px;
+  height: 72px;
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 40%, #2563eb 80%, #1e3a8a 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+  box-shadow: 0 6px 14px rgba(10, 25, 47, 0.45);
+  transform-origin: top center;
+  z-index: 2;
+}
+
+/* Book Inner Pages Stack */
+.bk-inner-pages {
+  position: absolute;
+  inset: 7px 3px 7px 9px;
+  border-radius: 4px 18px 18px 4px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow:
+    1px 0 0 #e2e8f0,
+    2px 0 0 #fff,
+    3px 0 0 #cbd5e1,
+    4px 1px 0 #fff,
+    5px 1px 0 #cbd5e1,
+    6px 2px 0 #fff,
+    7px 2px 0 #94a3b8,
+    0 20px 45px rgba(10, 25, 47, 0.22);
+  overflow: hidden;
+}
+
+.bk-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.5rem;
+  color: #0f172a;
+}
+
+.bk-silver-crest {
+  color: #3b82f6;
+  letter-spacing: 0.3em;
+  font-size: 1.1rem;
+}
+
+.bk-page-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.8rem, 8vw, 3.8rem);
+  line-height: 1.1;
+  margin: 0;
+  color: #0f172a;
+}
+
+.bk-page-sub {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #2563eb;
+  letter-spacing: 0.05em;
+}
+
+.bk-page-flourish {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 70%;
+  color: #3b82f6;
+}
+
+.bk-page-flourish i {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #3b82f6);
+}
+
+.bk-page-flourish i:last-child {
+  transform: scaleX(-1);
+}
+
+.bk-page-flourish span {
+  font-size: 0.85rem;
+}
+
+.bk-page-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.bk-inner-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle at center, rgba(147, 197, 253, 0.85) 0%, rgba(59, 130, 246, 0.35) 45%, transparent 70%);
+  pointer-events: none;
+  filter: blur(12px);
+}
+
+/* 3D Cover Structure */
+.bk-cover {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  z-index: 5;
+}
+
+.bk-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 5px 18px 18px 5px;
+  backface-visibility: hidden;
+}
+
+/* FRONT COVER - Deep Royal Midnight Navy Velvet */
+.bk-front {
+  padding: 14px 14px 14px 34px;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(147, 197, 253, 0.15) 0%, transparent 45%),
+    linear-gradient(145deg, #1e3a8a 0%, #0f172a 45%, #070e1b 100%);
+  box-shadow:
+    0 28px 65px rgba(7, 14, 27, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset -10px 0 20px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/* Shimmer Light Reflection Across Silver Foil */
+.bk-shimmer-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(219, 234, 254, 0.22) 48%,
+    rgba(255, 255, 255, 0.42) 50%,
+    rgba(219, 234, 254, 0.22) 52%,
+    transparent 70%
+  );
+  background-size: 250% 250%;
+  animation: bkSilverSweep 6s ease-in-out infinite;
+}
+
+@keyframes bkSilverSweep {
+  0% { background-position: 180% 0%; }
+  45%, 100% { background-position: -80% 100%; }
+}
+
+/* Book Spine with Silver & Navy Ribs */
+.bk-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 25px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: inset -4px 0 8px rgba(0, 0, 0, 0.55);
+  background:
+    linear-gradient(90deg, #050b14 0%, #0f172a 55%, #1e3a8a 80%, #0a192f 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.bk-spine-rib {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #475569, #e2e8f0, #475569);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bk-spine-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  color: #cbd5e1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  opacity: 0.85;
+}
+
+.bk-stitch {
+  position: absolute;
+  left: 31px;
+  top: 12px;
+  bottom: 12px;
+  border-left: 2px dashed rgba(203, 213, 225, 0.5);
+}
+
+/* Embossed Silver Foil Frame */
+.bk-ornament-frame {
+  position: relative;
+  height: 100%;
+  border: 1.5px solid #93c5fd;
+  border-radius: 4px 14px 14px 4px;
+  box-shadow:
+    inset 0 0 0 4px #0f172a,
+    inset 0 0 0 6px rgba(147, 197, 253, 0.45),
+    0 0 14px rgba(59, 130, 246, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0.8rem 0.85rem;
+  text-align: center;
+}
+
+.bk-corner {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+/* Top Crest Filigree */
+.bk-top-crest {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #bfdbfe;
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.bk-crest-line {
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #93c5fd);
+}
+
+.bk-top-crest .bk-crest-line:last-child {
+  transform: scaleX(-1);
+}
+
+.bk-crest-diamond {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.bk-crest-star {
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Center Medallion with Glowing Heart */
+.bk-medallion-wrap {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  margin: 0.15rem 0;
+}
+
+.bk-medallion-halo {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(147, 197, 253, 0.5) 0%, rgba(37, 99, 235, 0.3) 50%, transparent 70%);
+  filter: blur(6px);
+}
+
+.bk-medallion-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(191, 219, 254, 0.65);
+}
+
+.bk-heart-emblem {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.55));
+}
+
+/* Header Text Group */
+.bk-header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.bk-volume-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #bfdbfe;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.bk-title {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: clamp(3.2rem, 9vw, 4rem);
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #dbeafe 35%, #ffffff 50%, #93c5fd 75%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+.bk-subtitle {
+  margin: 0;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #e2e8f0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Ornamental Divider */
+.bk-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 75%;
+  color: #93c5fd;
+  margin: 0.1rem 0;
+}
+
+.bk-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #93c5fd);
+}
+
+.bk-divider .bk-divider-line:last-child {
+  transform: scaleX(-1);
+}
+
+.bk-divider-symbol {
+  font-size: 0.85rem;
+  color: #dbeafe;
+}
+
+/* Action & Password Input Area */
+.bk-action-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.bk-hint-text {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #f1f5f9;
+  font-style: italic;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bk-key-vector-icon {
+  color: #93c5fd;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bk-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.bk-code-row {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  justify-content: center;
+  cursor: text;
+}
+
+.bk-real-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 16px;
+  cursor: text;
+  z-index: 5;
+}
+
+.bk-digit-box {
+  flex: 1;
+  max-width: 38px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #0f172a;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  border: 1px solid rgba(147, 197, 253, 0.45);
+  box-shadow:
+    inset 0 2px 4px rgba(10, 25, 47, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+}
+
+.bk-digit-box.filled {
+  background: #ffffff;
+  color: #1e3a8a;
+  border-color: #60a5fa;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 0 12px rgba(96, 165, 250, 0.5);
+}
+
+.bk-digit-box.active {
+  border-color: #ffffff;
+  box-shadow:
+    0 0 0 2px #60a5fa,
+    0 0 16px rgba(147, 197, 253, 0.85);
+}
+
+.bk-digit-box.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #f87171;
+  box-shadow:
+    0 0 0 2px #f87171,
+    0 0 14px rgba(248, 113, 113, 0.5);
+}
+
+.bk-caret {
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: #2563eb;
+  border-radius: 2px;
+  animation: bkCaretBlink 0.9s infinite;
+}
+
+@keyframes bkCaretBlink {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0; }
+}
+
+/* Unlock Button */
+.bk-unlock-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #2563eb 100%);
+  color: #0f172a;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid #ffffff;
+  box-shadow:
+    0 8px 22px rgba(7, 14, 27, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(96, 165, 250, 0.45);
+  cursor: pointer;
+}
+
+.bk-unlock-btn:hover:not(:disabled) {
+  box-shadow:
+    0 10px 28px rgba(7, 14, 27, 0.65),
+    inset 0 2px 0 #ffffff,
+    0 0 24px rgba(147, 197, 253, 0.9);
+}
+
+.bk-btn-halo {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px dashed rgba(191, 219, 254, 0.7);
+  animation: bkSpin 20s linear infinite;
+}
+
+@keyframes bkSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Status Feedback Text */
+.bk-status-feedback {
+  min-height: 1.6rem;
+  display: grid;
+  place-items: center;
+}
+
+.bk-err-msg {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #fecdd3;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(185, 28, 28, 0.8);
+}
+
+.bk-success-msg {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #dbeafe;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(147, 197, 253, 0.9);
+}
+
+.bk-sub-instruction {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(226, 232, 240, 0.75);
+  letter-spacing: 0.05em;
+}
+
+/* BACK OF FRONT COVER */
+.bk-back {
+  transform: rotateY(180deg);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
+    radial-gradient(circle, #cbd5e1 2px, transparent 3px) 0 0 / 24px 24px,
+    #f8fafc;
+  border: 1px solid rgba(147, 197, 253, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -14px 0 24px rgba(15, 23, 42, 0.2);
+}
+
+.bk-back-ornament {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e3a8a;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.bk-back-ornament span {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+/* Unlock Particle Burst */
+.bk-burst-particle {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Mobile Ergonomics & Responsive Tuning
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .bk-wrapper {
+    width: min(330px, 90vw);
+    height: min(495px, 75svh);
+  }
+  .bk-front {
+    padding: 12px 10px 12px 28px;
+  }
+  .bk-spine {
+    width: 22px;
+  }
+  .bk-stitch {
+    left: 26px;
+  }
+  .bk-title {
+    font-size: clamp(2.7rem, 8.5vw, 3.3rem);
+  }
+  .bk-medallion-wrap {
+    width: 58px;
+    height: 58px;
+  }
+  .bk-heart-emblem {
+    width: 50px;
+    height: 50px;
+  }
+  .bk-digit-box {
+    max-width: 35px;
+    height: 44px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+  }
+  .bk-unlock-btn {
+    width: 46px;
+    height: 46px;
+  }
+  .bk-hint-text {
+    font-size: 0.78rem;
+  }
+  .bk-sub-instruction {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .bk-wrapper {
+    width: 295px;
+    height: 450px;
+  }
+  .bk-title {
+    font-size: 2.5rem;
+  }
+  .bk-digit-box {
+    max-width: 31px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
