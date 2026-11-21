@@ -17,7 +17,7 @@ const diff = (a, b) => {
   return { Tahun: y, Bulan: m, Hari: d, Jam: h, Menit: mi, Detik: s }
 }
 
-const QUOTE_WORDS = 'Setiap detik bersamamu adalah anugerah terindah, dan setiap langkah kita adalah cerita favoritku.'.split(' ')
+const QUOTE_WORDS = 'Setiap detik bersamamu adalah hal terindah, dan setiap langkah kita adalah cerita favoritku.'.split(' ')
 
 export default function CounterPage() {
   const start = useMemo(() => new Date(config.startDate), [])
@@ -162,7 +162,7 @@ export default function CounterPage() {
           <span className="badge-text">
             {left <= 0 || left >= 365
               ? 'Selamat Hari Jadi, Sayang! Cinta Kita Selamanya'
-              : `${left} hari lagi menuju hari jadi ke-${t.Tahun + 1}`}
+              : `${left} hari lagi menuju tahun jadi ke-${t.Tahun + 1}`}
           </span>
         </motion.div>
       </motion.div>

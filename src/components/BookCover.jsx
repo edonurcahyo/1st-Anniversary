@@ -447,7 +447,7 @@ export default function BookCover({ onUnlock }) {
                           ✦ Terbuka dengan penuh cinta...
                         </motion.p>
                       ) : (
-                        <p className="bk-sub-instruction">Klik gembok atau masukkan 6 angka cinta kita</p>
+                        <p className="bk-sub-instruction">Masukkan 6 angka</p>
                       )}
                     </AnimatePresence>
                   </div>
