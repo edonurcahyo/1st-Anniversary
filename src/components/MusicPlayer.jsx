@@ -1,14 +1,19 @@
-import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-export default function MusicPlayer() {
-  const a = useRef(null)
-  const [on, setOn] = useState(false)
-  useEffect(() => { a.current?.play().then(() => setOn(true)).catch(() => {}) }, [])
-  const toggle = () => { if (on) a.current.pause(); else a.current.play(); setOn(!on) }
+
+export default function MusicPlayer({ isPlaying, onToggle }) {
   return (
-    <>
-      <audio ref={a} src="public\audio\Sheila On 7 - Kita.mp3" loop />
-      <motion.button className="music" onClick={toggle} aria-label={on ? 'Pause musik' : 'Putar musik'} animate={on ? { rotate: 360 } : { rotate: 0 }} transition={on ? { repeat: Infinity, duration: 6, ease: 'linear' } : {}}>{on ? 'Ⅱ' : '▶'}</motion.button>
-    </>
+    <motion.button
+      className="music"
+      onClick={onToggle}
+      aria-label={isPlaying ? 'Pause musik' : 'Putar musik'}
+      animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
+      transition={
+        isPlaying
+          ? { repeat: Infinity, duration: 6, ease: 'linear' }
+          : {}
+      }
+    >
+      {isPlaying ? 'Ⅱ' : '▶'}
+    </motion.button>
   )
 }

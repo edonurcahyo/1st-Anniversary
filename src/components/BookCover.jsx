@@ -36,7 +36,7 @@ function CornerOrnament({ style }) {
   )
 }
 
-export default function BookCover({ onUnlock }) {
+export default function BookCover({ onUnlock, onBeforeUnlock }) {
   const [val, setVal] = useState('')
   const [wrong, setWrong] = useState(false)
   const [focus, setFocus] = useState(false)
@@ -88,6 +88,9 @@ export default function BookCover({ onUnlock }) {
     if (val === config.password) {
       setWrong(false)
       setPhase('unlocking')
+
+      // Pemicu autoplay dari user gesture (klik/submit form)
+      onBeforeUnlock?.()
 
       setTimeout(() => {
         setPhase('open')
