@@ -96,8 +96,8 @@ export default function MemoriesAlbum({ back, next }) {
               <i className="tape" />
               {last ? (
                 <div className="closing">
-                  <p className="script big">Masih banyak cerita indah yang menunggu kita.</p>
-                  <p>Apakah kamu mau lihat orang yang sangat spesial buat aku?</p>
+                  <p className="script big">Maaf yaa cuma dikit foto kenangannyaa. Untuk kedepannya kita buat foto lebih banyak lagi yaa</p>
+                  <p>Biar ga terlalu dikit, kamu mau liat foto lucu ga?</p>
                   <motion.button
                     type="button"
                     onClick={next}

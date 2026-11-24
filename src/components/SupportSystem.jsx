@@ -25,7 +25,7 @@ export default function SupportSystem({ back }) {
 
   return (
     <div className="page wide support-page">
-      <motion.h2 className="script hero" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}>Orang yang sangat spesial buat aku</motion.h2>
+      <motion.h2 className="script hero" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}>Ini support system terbaikkuu ❤</motion.h2>
       <div className="support-gallery">
         {support.map((s, i) => (
           <motion.figure key={i} className="polaroid solo" initial={{ opacity: 0, y: 24, rotate: i % 2 ? 3 : -3 }}

@@ -67,7 +67,7 @@ export default function CounterPage() {
       <motion.div className="counter-crest" variants={itemVariants}>
         <span className="counter-crest-line" />
         <span className="counter-crest-badge">
-          <span className="crest-star">✦</span> KISAH CINTA KITA <span className="crest-star">✦</span>
+          <span className="crest-star">✦</span> OUR STORY <span className="crest-star">✦</span>
         </span>
         <span className="counter-crest-line" />
       </motion.div>
@@ -162,7 +162,7 @@ export default function CounterPage() {
           <span className="badge-text">
             {left <= 0 || left >= 365
               ? 'Selamat Hari Jadi, Sayang! Cinta Kita Selamanya'
-              : `${left} hari lagi menuju tahun jadi ke-${t.Tahun + 1}`}
+              : `${left} hari lagi menuju Anniversary ke-${t.Tahun + 1}`}
           </span>
         </motion.div>
       </motion.div>

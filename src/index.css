@@ -402,193 +402,108 @@ button.ghost, .nav-arrow, .text-button {
 }
 
 /* ==========================================================================
-   HOMEPAGE: Chapter Navigation Menu — White & Deep Navy
+   HOMEPAGE: Book Table of Contents — Midnight Navy & Silver Blue
    ========================================================================== */
 
 .chapter-nav {
   width: 100%;
-  max-width: 840px;
+  max-width: 760px;
 }
 
 .chapter-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.65rem, 2vw, 1.15rem);
-  width: 100%;
-}
-
-.chapter-card {
-  position: relative;
-  min-height: 155px;
-  padding: clamp(0.9rem, 2.4vw, 1.3rem);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1.5px solid rgba(147, 197, 253, 0.35);
-  box-shadow:
-    0 12px 32px rgba(15, 23, 42, 0.05),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
-  overflow: hidden;
-  cursor: pointer;
-  color: var(--ink);
-  transition: border-color 220ms ease, box-shadow 220ms ease;
-}
-
-.chapter-card:hover {
-  border-color: #3b82f6;
-  box-shadow:
-    0 18px 42px rgba(30, 58, 138, 0.12),
-    0 0 20px rgba(147, 197, 253, 0.35),
-    inset 0 0 0 1px #fff;
-}
-
-/* Shimmer Sweep Animation on Card */
-.card-shimmer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(219, 234, 254, 0.4) 50%,
-    transparent 65%
-  );
-  background-size: 200% 200%;
-  opacity: 0;
-  transition: opacity 300ms ease;
-}
-
-.chapter-card:hover .card-shimmer {
-  opacity: 1;
-  animation: cardSweep 1.8s ease infinite;
-}
-
-@keyframes cardSweep {
-  0% { background-position: 150% 0%; }
-  100% { background-position: -50% 100%; }
-}
-
-/* Header of Chapter Card */
-.chapter-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 0.35rem;
-}
-
-.chapter-tag {
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #1e3a8a;
-  background: rgba(219, 234, 254, 0.6);
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(147, 197, 253, 0.45);
-}
-
-.chapter-badge {
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-family: 'Cormorant Infant', serif;
-  color: #3b82f6;
-  background: #f1f5f9;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: grid;
-  place-items: center;
-}
-
-/* Center Icon with Ring */
-.chapter-icon-wrap {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  margin: 0.15rem 0;
-}
-
-.icon-glow-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(219, 234, 254, 0.6), rgba(191, 219, 254, 0.3));
-  border: 1px solid rgba(147, 197, 253, 0.4);
-  transition: transform 220ms ease;
-}
-
-.chapter-card:hover .icon-glow-ring {
-  transform: scale(1.1) rotate(4deg);
-  background: linear-gradient(135deg, rgba(147, 197, 253, 0.6), rgba(96, 165, 250, 0.35));
-}
-
-.chapter-icon-svg {
-  position: relative;
-  z-index: 1;
-  color: #1e3a8a;
-}
-
-.chapter-icon-svg svg {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-/* Card Body */
-.chapter-card-body {
-  margin-top: 0.25rem;
-  width: 100%;
-}
-
-.chapter-title {
-  margin: 0 0 0.18rem;
-  font-family: 'Cormorant Infant', serif;
-  font-size: clamp(1.18rem, 3vw, 1.42rem);
-  font-weight: 600;
-  line-height: 1.2;
-  color: #0f172a;
-}
-
-.chapter-desc {
+  gap: 0.1rem;
+  list-style: none;
   margin: 0;
-  font-size: 0.74rem;
-  line-height: 1.35;
-  color: #64748b;
+  padding: 0;
 }
 
-/* Card Footer Action */
-.chapter-footer {
+.chapter-nav-title {
+  margin: 0 0 0.35rem;
+  color: var(--rose-deep);
+  font-family: 'Cormorant Infant', serif;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.chapter-item {
+  min-width: 0;
+}
+
+.chapter-entry {
   display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.55rem;
-  font-size: 0.72rem;
+  align-items: baseline;
+  gap: 0.45rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.45rem 0.25rem;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink);
+  font-family: 'Cormorant Infant', serif;
+  font-size: clamp(1rem, 2.8vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.chapter-entry:hover:not(:disabled),
+.chapter-entry:focus-visible {
+  transform: scale(1.01);
+  background: transparent;
+  box-shadow: none;
+  color: var(--rose);
+}
+
+.chapter-entry:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+}
+
+.chapter-label,
+.chapter-page {
+  white-space: nowrap;
+}
+
+.chapter-leader {
+  flex: 1;
+  min-width: 0.5rem;
+  border-bottom: 1px dashed rgba(30, 58, 138, 0.65);
+  transform: translateY(-0.2em);
+  transition: border-color 180ms ease;
+}
+
+.chapter-page {
+  color: var(--gold-deep);
+  font-size: 0.9em;
   font-weight: 500;
-  color: #2563eb;
-  transition: gap 200ms ease;
 }
 
-.chapter-card:hover .chapter-footer {
-  gap: 0.55rem;
-  color: #1d4ed8;
+.chapter-entry-icon {
+  flex: 0 0 1rem;
+  width: 1rem;
+  height: 1rem;
+  color: var(--rose);
+  opacity: 0;
+  transform: translateX(-3px);
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
-.action-arrow {
-  transition: transform 200ms ease;
+.chapter-entry:hover:not(:disabled) .chapter-leader,
+.chapter-entry:focus-visible .chapter-leader {
+  border-color: var(--rose);
 }
 
-.chapter-card:hover .action-arrow {
-  transform: translateX(3px);
+.chapter-entry:hover:not(:disabled) .chapter-entry-icon,
+.chapter-entry:focus-visible .chapter-entry-icon {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ==========================================================================
@@ -1456,8 +1371,6 @@ button.ghost, .nav-arrow, .text-button {
   .counter-card { min-height: 94px; }
   .counter-digits { height: 2.6rem; }
   .counter-num { line-height: 2.6rem; }
-  .chapter-grid { grid-template-columns: 1fr; }
-  .chapter-card { min-height: 135px; }
   .progress-card { grid-template-columns: 92px 1fr; gap: .85rem; }
   .progress-ring { width: 92px; height: 92px; }
   .progress-ring > div { width: 70px; height: 70px; }
@@ -1478,9 +1391,6 @@ button.ghost, .nav-arrow, .text-button {
   .counter-num { font-size: 1.5rem; line-height: 2.2rem; }
   .counter-unit-label { font-size: 0.68rem; }
   .milestone-badge { padding: 0.55rem 1rem; }
-  .chapter-card { padding: 0.85rem; }
-  .chapter-title { font-size: 1.2rem; }
-  .chapter-desc { font-size: 0.72rem; }
   .stage { min-height: 350px; }
   .polaroid { width: min(280px, 82vw); }
   .gallery-overlay { padding: .7rem; }
@@ -1488,6 +1398,14 @@ button.ghost, .nav-arrow, .text-button {
   .memory-card strong { font-size: .72rem; }
   .memory-card span { min-height: 68px; padding: .55rem; }
   .gallery-button { min-width: 168px; padding-inline: 1rem; }
+}
+
+@media (max-width: 360px) {
+  .chapter-entry {
+    gap: 0.3rem;
+    padding-inline: 0;
+    font-size: 0.94rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

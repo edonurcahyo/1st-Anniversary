@@ -8,9 +8,10 @@ export const defaultDates = [
   { id: 4, title: 'Perpus Date', date: 'Rabu, 3 Juni 2026', done: true },
   { id: 5, title: 'Buka Puasa Bareng', date: 'Kamis, 12 November 2026', done: true },
   { id: 6, title: 'Photobooth', date: 'Kamis, 26 November 2026 ', done: false },
-  { id: 7, title: 'PS Date', date: 'Belum dijadwalkan', done: false },
-  { id: 8, title: 'Ke Malang?', date: 'Belum dijadwalkan', done: false },
-  { id: 9, title: 'Naik Gunung?', date: 'Belum dijadwalkan', done: false },
+  { id: 7, title: 'GYM Date', date: 'Belum dijadwalkan', done: false },
+  { id: 8, title: 'PS Date', date: 'Belum dijadwalkan', done: false },
+  { id: 9, title: 'Ke Malang?', date: 'Belum dijadwalkan', done: false },
+  { id: 10, title: 'Naik Gunung?', date: 'Belum dijadwalkan', done: false },
 ]
 
 export default function DatingList({ back }) {

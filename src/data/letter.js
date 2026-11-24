@@ -1,9 +1,10 @@
 // Pisahkan paragraf dengan baris kosong.
-export const letter = `Sayang,
+export const letter = 
+`Sayang,
 
-Tulis suratmu yang panjang di sini.
+Makasii banyakk yaa untuk waktu selama inii,
 
 Paragraf kedua...
 
-Dengan cinta,
-Aku`
+Sincerely,
+Edo`
