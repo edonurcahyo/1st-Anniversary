@@ -11,11 +11,16 @@ import MusicPlayer from './components/MusicPlayer'
 import Petals from './components/Petals'
 import DatingList from './components/DatingList'
 import Preloader from './components/Preloader'
+import BeginningPage from './components/BeginningPage'
+import PlaylistPage from './components/PlaylistPage'
+import FuturePage from './components/FuturePage'
+import { playlist } from './data/playlist'
 
 export default function App() {
   const [view, setView] = useState('cover')
   const [loading, setLoading] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [currentTrack, setCurrentTrack] = useState(playlist[0])
   const audioRef = useRef(null)
 
   const home = () => setView('home')
@@ -63,6 +68,23 @@ export default function App() {
     }
   }
 
+  const selectTrack = async (track) => {
+    if (!audioRef.current) return
+    if (currentTrack.id !== track.id) {
+      audioRef.current.pause()
+      audioRef.current.src = track.src
+      setCurrentTrack(track)
+    }
+
+    try {
+      await audioRef.current.play()
+      setIsPlaying(true)
+    } catch (error) {
+      console.error('Musik gagal diputar:', error)
+      setIsPlaying(false)
+    }
+  }
+
   return (
     <>
       <AnimatePresence>{loading && <Preloader />}</AnimatePresence>
@@ -70,29 +92,60 @@ export default function App() {
       {/* Satu-satunya <audio> di aplikasi — selalu ada di DOM */}
       <audio
         ref={audioRef}
-        src="/audio/Sheila On 7 - Kita.mp3"
+        src={playlist[0].src}
         loop
         preload="auto"
       />
 
       <div className="bg" aria-hidden><i className="blob b1" /><i className="blob b2" /><i className="blob b3" /></div>
-      {view !== 'album' && view !== 'support' && <Petals />}
+      {view !== 'album' && view !== 'support' && view !== 'home' && <Petals />}
 
       {view !== 'cover' && (
-        <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} />
+        <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} isHome={view === 'home'} />
       )}
 
       <AnimatePresence mode="wait">
-        <motion.main key={view} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.28, ease: 'easeOut' }}>
+        <motion.main className={view === 'home' ? 'home-main' : undefined} key={view} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.28, ease: 'easeOut' }}>
           {view === 'cover' && (
             <BookCover onUnlock={handleUnlock} onBeforeUnlock={startMusic} />
           )}
-          {view === 'home' && <div className="center col"><CounterPage /><MenuIcons go={setView} /></div>}
+          {view === 'beginning' && <BeginningPage back={home} />}
+          {view === 'home' && (
+            <div className="home-book-page">
+              <span className="home-page-corner corner-top-left" aria-hidden="true" />
+              <span className="home-page-corner corner-top-right" aria-hidden="true" />
+              <span className="home-page-corner corner-bottom-left" aria-hidden="true" />
+              <span className="home-page-corner corner-bottom-right" aria-hidden="true" />
+              <header className="home-page-header">
+                <h1>Our Story</h1>
+                <p>Halaman 1: Awal Mula</p>
+              </header>
+              <div className="home-page-content">
+                <CounterPage />
+                <MenuIcons go={setView} />
+              </div>
+              <figure className="home-polaroid">
+                <span className="polaroid-tape" aria-hidden="true" />
+                <img src="/images/memories/pic1.jpeg" alt="Cuplikan foto kenangan kita" />
+                <figcaption>kenangan kecil, cerita besar</figcaption>
+              </figure>
+            </div>
+          )}
           {view === 'letter' && <LetterPage back={home} />}
           {view === 'album' && <MemoriesAlbum back={home} next={() => setView('support')} />}
           {view === 'reasons' && <ReasonsPage back={home} />}
+          {view === 'playlist' && (
+            <PlaylistPage
+              tracks={playlist}
+              currentTrack={currentTrack}
+              isPlaying={isPlaying}
+              onSelectTrack={selectTrack}
+              back={home}
+            />
+          )}
           {view === 'support' && <SupportSystem back={home} />}
           {view === 'dates' && <DatingList back={home} />}
+          {view === 'future' && <FuturePage back={home} />}
         </motion.main>
       </AnimatePresence>
     </>

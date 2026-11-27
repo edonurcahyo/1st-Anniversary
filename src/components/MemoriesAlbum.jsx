@@ -70,8 +70,11 @@ export default function MemoriesAlbum({ back, next }) {
     <>
       <div className="page album-page">
         <header className="page-heading">
-          <p className="eyebrow">Koleksi kenangan kita</p>
-          <h2 className="script hero sm">Album Kenangan</h2>
+          <p className="eyebrow">Chapter 03 · Koleksi kenangan kita</p>
+          <h2 className="script hero sm">Our Memory Lane</h2>
+          <p className="chapter-page-subtitle">
+            Momen yang membeku dalam waktu, tersimpan rapi di hati.
+          </p>
         </header>
 
         {/* Main Stage Polaroid Slider */}

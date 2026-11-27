@@ -11,7 +11,12 @@ export default function LetterPage({ back }) {
     return () => clearInterval(i)
   }, [open, done])
   return (
-    <div className="page">
+    <div className="page chapter-content-page">
+      <header className="page-heading">
+        <p className="eyebrow">Chapter 02 · Surat</p>
+        <h2 className="script hero sm">Surat Untukmu</h2>
+        <p className="chapter-page-subtitle">Kata-kata yang tak sempat terucap lewat lisan.</p>
+      </header>
       {!open ? (
         <motion.button className="envelope" onClick={() => setOpen(true)} animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 3 }} whileTap={{ scale: 0.95 }}>
           <i className="flap" /><span className="seal" aria-hidden="true">♡</span><em>Ketuk untuk membuka</em>

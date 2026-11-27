@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Romantic Luxury Book Cover Styling — White & Deep Navy Blue Theme
+   Romantic Luxury Book Cover Styling — Cream Paper, Deep Navy & Silver
    ========================================================================== */
 
 .bk-stage {
@@ -25,8 +25,8 @@
 
 .bk-ambient-sparkle {
   position: absolute;
-  color: #93c5fd;
-  text-shadow: 0 0 10px rgba(147, 197, 253, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+  color: #cbd1d7;
+  text-shadow: 0 0 10px rgba(203, 209, 215, 0.65), 0 0 20px rgba(168, 132, 77, 0.25);
   user-select: none;
 }
 
@@ -62,14 +62,14 @@
   transform-origin: center center;
 }
 
-/* Sapphire Silk Ribbon Bookmark */
+/* Silver-threaded Navy Ribbon Bookmark */
 .bk-ribbon {
   position: absolute;
   right: 46px;
   bottom: -40px;
   width: 18px;
   height: 72px;
-  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 40%, #2563eb 80%, #1e3a8a 100%);
+  background: linear-gradient(135deg, #e8e2d7 0%, #cbd1d7 24%, #25364b 72%, #142338 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
   box-shadow: 0 6px 14px rgba(10, 25, 47, 0.45);
   transform-origin: top center;
@@ -81,19 +81,19 @@
   position: absolute;
   inset: 7px 3px 7px 9px;
   border-radius: 4px 18px 18px 4px;
-  background: #ffffff;
+  background: #fdfbf7;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   box-shadow:
-    1px 0 0 #e2e8f0,
-    2px 0 0 #fff,
-    3px 0 0 #cbd5e1,
-    4px 1px 0 #fff,
-    5px 1px 0 #cbd5e1,
-    6px 2px 0 #fff,
-    7px 2px 0 #94a3b8,
+    1px 0 0 #e8e2d7,
+    2px 0 0 #fffdf8,
+    3px 0 0 #d7d1c5,
+    4px 1px 0 #fffdf8,
+    5px 1px 0 #d7d1c5,
+    6px 2px 0 #fffdf8,
+    7px 2px 0 #9aa3ad,
     0 20px 45px rgba(10, 25, 47, 0.22);
   overflow: hidden;
 }
@@ -109,7 +109,7 @@
 }
 
 .bk-silver-crest {
-  color: #3b82f6;
+  color: #a8844d;
   letter-spacing: 0.3em;
   font-size: 1.1rem;
 }
@@ -126,7 +126,7 @@
   font-family: 'Cormorant Infant', serif;
   font-size: 1.1rem;
   font-style: italic;
-  color: #2563eb;
+  color: #725a37;
   letter-spacing: 0.05em;
 }
 
@@ -135,13 +135,13 @@
   align-items: center;
   gap: 0.8rem;
   width: 70%;
-  color: #3b82f6;
+  color: #a8844d;
 }
 
 .bk-page-flourish i {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #3b82f6);
+  background: linear-gradient(90deg, transparent, #a8844d);
 }
 
 .bk-page-flourish i:last-child {
@@ -163,7 +163,7 @@
 .bk-inner-glow {
   position: absolute;
   inset: -20px;
-  background: radial-gradient(circle at center, rgba(147, 197, 253, 0.85) 0%, rgba(59, 130, 246, 0.35) 45%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(231, 221, 201, 0.5) 0%, rgba(168, 132, 77, 0.18) 45%, transparent 70%);
   pointer-events: none;
   filter: blur(12px);
 }
@@ -184,12 +184,12 @@
   backface-visibility: hidden;
 }
 
-/* FRONT COVER - Deep Royal Midnight Navy Velvet */
+/* FRONT COVER - Deep Navy with Silver Foil */
 .bk-front {
   padding: 14px 14px 14px 34px;
   background:
-    radial-gradient(circle at 75% 20%, rgba(147, 197, 253, 0.15) 0%, transparent 45%),
-    linear-gradient(145deg, #1e3a8a 0%, #0f172a 45%, #070e1b 100%);
+    radial-gradient(circle at 75% 20%, rgba(203, 209, 215, 0.12) 0%, transparent 45%),
+    linear-gradient(145deg, #25364b 0%, #142338 45%, #070e1b 100%);
   box-shadow:
     0 28px 65px rgba(7, 14, 27, 0.6),
     inset 0 0 0 1px rgba(255, 255, 255, 0.3),
@@ -205,9 +205,9 @@
   background: linear-gradient(
     115deg,
     transparent 30%,
-    rgba(219, 234, 254, 0.22) 48%,
+    rgba(203, 209, 215, 0.22) 48%,
     rgba(255, 255, 255, 0.42) 50%,
-    rgba(219, 234, 254, 0.22) 52%,
+    rgba(203, 209, 215, 0.22) 52%,
     transparent 70%
   );
   background-size: 250% 250%;
@@ -229,7 +229,7 @@
   border-radius: 5px 0 0 5px;
   box-shadow: inset -4px 0 8px rgba(0, 0, 0, 0.55);
   background:
-    linear-gradient(90deg, #050b14 0%, #0f172a 55%, #1e3a8a 80%, #0a192f 100%);
+    linear-gradient(90deg, #050b14 0%, #0f172a 55%, #25364b 80%, #0a192f 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -268,12 +268,12 @@
 .bk-ornament-frame {
   position: relative;
   height: 100%;
-  border: 1.5px solid #93c5fd;
+  border: 1.5px solid #cbd1d7;
   border-radius: 4px 14px 14px 4px;
   box-shadow:
     inset 0 0 0 4px #0f172a,
-    inset 0 0 0 6px rgba(147, 197, 253, 0.45),
-    0 0 14px rgba(59, 130, 246, 0.25);
+    inset 0 0 0 6px rgba(203, 209, 215, 0.42),
+    0 0 14px rgba(203, 209, 215, 0.16);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -294,7 +294,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: #bfdbfe;
+  color: #d7dce1;
   font-size: 0.75rem;
   margin-top: 0.2rem;
 }
@@ -302,7 +302,7 @@
 .bk-crest-line {
   width: 24px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #93c5fd);
+  background: linear-gradient(90deg, transparent, #cbd1d7);
 }
 
 .bk-top-crest .bk-crest-line:last-child {
@@ -334,7 +334,7 @@
   position: absolute;
   inset: -8px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(147, 197, 253, 0.5) 0%, rgba(37, 99, 235, 0.3) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(203, 209, 215, 0.35) 0%, rgba(168, 132, 77, 0.18) 50%, transparent 70%);
   filter: blur(6px);
 }
 
@@ -342,7 +342,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1px dashed rgba(191, 219, 254, 0.65);
+  border: 1px dashed rgba(203, 209, 215, 0.65);
 }
 
 .bk-heart-emblem {
@@ -365,7 +365,7 @@
   font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.2em;
-  color: #bfdbfe;
+  color: #d7dce1;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -375,7 +375,7 @@
   font-size: clamp(3.2rem, 9vw, 4rem);
   line-height: 1;
   margin: 0;
-  background: linear-gradient(135deg, #ffffff 0%, #dbeafe 35%, #ffffff 50%, #93c5fd 75%, #ffffff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e8e2d7 35%, #ffffff 50%, #cbd1d7 75%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -399,14 +399,14 @@
   align-items: center;
   gap: 0.5rem;
   width: 75%;
-  color: #93c5fd;
+  color: #cbd1d7;
   margin: 0.1rem 0;
 }
 
 .bk-divider-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #93c5fd);
+  background: linear-gradient(90deg, transparent, #cbd1d7);
 }
 
 .bk-divider .bk-divider-line:last-child {
@@ -415,7 +415,7 @@
 
 .bk-divider-symbol {
   font-size: 0.85rem;
-  color: #dbeafe;
+  color: #d7dce1;
 }
 
 /* Action & Password Input Area */
@@ -440,7 +440,7 @@
 }
 
 .bk-key-vector-icon {
-  color: #93c5fd;
+  color: #cbd1d7;
   display: inline-block;
   vertical-align: middle;
 }
@@ -478,13 +478,13 @@
   max-width: 38px;
   height: 48px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(253, 251, 247, 0.98);
   color: #0f172a;
   display: grid;
   place-items: center;
   font-size: 1.35rem;
   font-weight: 600;
-  border: 1px solid rgba(147, 197, 253, 0.45);
+  border: 1px solid rgba(203, 209, 215, 0.72);
   box-shadow:
     inset 0 2px 4px rgba(10, 25, 47, 0.15),
     0 2px 8px rgba(0, 0, 0, 0.2);
@@ -493,19 +493,19 @@
 }
 
 .bk-digit-box.filled {
-  background: #ffffff;
-  color: #1e3a8a;
-  border-color: #60a5fa;
+  background: #fffdf8;
+  color: #25364b;
+  border-color: #a8844d;
   box-shadow:
     inset 0 1px 2px rgba(0, 0, 0, 0.08),
-    0 0 12px rgba(96, 165, 250, 0.5);
+    0 0 10px rgba(168, 132, 77, 0.22);
 }
 
 .bk-digit-box.active {
-  border-color: #ffffff;
+  border-color: #fffdf8;
   box-shadow:
-    0 0 0 2px #60a5fa,
-    0 0 16px rgba(147, 197, 253, 0.85);
+    0 0 0 2px #a8844d,
+    0 0 12px rgba(168, 132, 77, 0.32);
 }
 
 .bk-digit-box.error {
@@ -521,7 +521,7 @@
   position: absolute;
   width: 2px;
   height: 22px;
-  background: #2563eb;
+  background: #a8844d;
   border-radius: 2px;
   animation: bkCaretBlink 0.9s infinite;
 }
@@ -538,7 +538,7 @@
   height: 50px;
   padding: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #2563eb 100%);
+  background: linear-gradient(135deg, #fffdf8 0%, #d7dce1 50%, #a8844d 100%);
   color: #0f172a;
   display: grid;
   place-items: center;
@@ -546,7 +546,7 @@
   box-shadow:
     0 8px 22px rgba(7, 14, 27, 0.5),
     inset 0 2px 0 rgba(255, 255, 255, 0.9),
-    0 0 16px rgba(96, 165, 250, 0.45);
+    0 0 12px rgba(203, 209, 215, 0.3);
   cursor: pointer;
 }
 
@@ -554,14 +554,14 @@
   box-shadow:
     0 10px 28px rgba(7, 14, 27, 0.65),
     inset 0 2px 0 #ffffff,
-    0 0 24px rgba(147, 197, 253, 0.9);
+    0 0 18px rgba(203, 209, 215, 0.6);
 }
 
 .bk-btn-halo {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 1px dashed rgba(191, 219, 254, 0.7);
+  border: 1px dashed rgba(203, 209, 215, 0.7);
   animation: bkSpin 20s linear infinite;
 }
 
@@ -587,9 +587,9 @@
 .bk-success-msg {
   margin: 0;
   font-size: 0.95rem;
-  color: #dbeafe;
+  color: #e8e2d7;
   font-weight: 600;
-  text-shadow: 0 0 12px rgba(147, 197, 253, 0.9);
+  text-shadow: 0 0 10px rgba(203, 209, 215, 0.55);
 }
 
 .bk-sub-instruction {
@@ -603,10 +603,10 @@
 .bk-back {
   transform: rotateY(180deg);
   background:
-    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
-    radial-gradient(circle, #cbd5e1 2px, transparent 3px) 0 0 / 24px 24px,
-    #f8fafc;
-  border: 1px solid rgba(147, 197, 253, 0.4);
+    radial-gradient(circle at 50% 50%, rgba(168, 132, 77, 0.08) 0%, transparent 60%),
+    radial-gradient(circle, #d7d1c5 2px, transparent 3px) 0 0 / 24px 24px,
+    #fdfbf7;
+  border: 1px solid rgba(168, 132, 77, 0.36);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -618,7 +618,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: #1e3a8a;
+  color: #25364b;
   font-family: 'Cormorant Infant', serif;
   font-size: 1.25rem;
   font-style: italic;
@@ -626,7 +626,7 @@
 
 .bk-back-ornament span {
   font-size: 1.5rem;
-  color: #2563eb;
+  color: #a8844d;
 }
 
 /* Unlock Particle Burst */

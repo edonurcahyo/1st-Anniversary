@@ -14,9 +14,15 @@ function Card({ text, n }) {
 }
 export default function ReasonsPage({ back }) {
   return (
-    <div className="page wide">
-      <h2 className="script hero sm">Alasan aku sayang kamu</h2>
-      <p className="muted sm">Ketuk kartunya satu per satu</p>
+    <div className="page wide chapter-content-page">
+      <header className="page-heading">
+        <p className="eyebrow">Chapter 04 · Hal-hal yang kusayang</p>
+        <h2 className="script hero sm">100 Reasons Why</h2>
+        <p className="chapter-page-subtitle">
+          Seribu alasan kecil untuk tetap memilihmu setiap hari.
+        </p>
+      </header>
+      <p className="muted sm">Ketuk catatannya satu per satu</p>
       <div className="flips">{reasons.map((r, i) => <Card key={i} text={r} n={i} />)}</div>
       <button onClick={back}>Kembali</button>
     </div>

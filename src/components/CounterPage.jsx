@@ -99,20 +99,13 @@ export default function CounterPage() {
         <h2 className="script counter-hero-title">Kita Telah Bersama Selama</h2>
       </motion.div>
 
-      {/* Luxury Glass Cards Counter Grid - White & Deep Navy */}
+      {/* One shared stamp-like frame keeps the countdown visually grouped. */}
       <motion.div className="counter-grid" variants={itemVariants}>
         {Object.entries(t).map(([k, v]) => (
           <motion.div
             key={k}
             className="counter-card"
-            whileHover={{ y: -5, scale: 1.03 }}
-            transition={{ type: 'spring', stiffness: 350, damping: 22 }}
           >
-            <div className="card-ambient-glow" />
-            <div className="card-top-accent">
-              <span className="accent-dot" />
-            </div>
-
             <div className="counter-digits">
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.span

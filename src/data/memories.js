@@ -23,4 +23,12 @@ export const memories = [
   //pic 6
   { src: '/images/memories/pic6.jpg', date: '14 November 2026', caption: 'Foto bareng keluargaku v2', 
     description: 'Makan bareng habis dari acara wisuda' },
+
+  //pic 7
+  { src: '/images/memories/pic7.jpg', date: '27 November 2026', caption: 'Photobooth pertama kalinya', 
+    description: 'Akhirnya kita bisa foto bareng di photobooth 😭, setelah kesekian kalinya gagal buat photobooth 😭' },
+
+  //pic 8
+  { src: '/images/memories/pic8.jpg', date: '27 November 2026', caption: 'Habis selesai photobooth', 
+    description: 'Udah selesai photobooth' },
 ]

@@ -8,7 +8,7 @@ export const defaultDates = [
   { id: 4, title: 'Perpus Date', date: 'Minggu, 3 Juni 2026', done: true },
   { id: 5, title: 'Jogging Date', date: 'Rabu, 21 Juni 2026', done: true },
   { id: 6, title: 'Buka Puasa Bareng', date: 'Kamis, 12 November 2026', done: true },
-  { id: 7, title: 'Photobooth', date: 'Kamis, 26 November 2026 ', done: false },
+  { id: 7, title: 'Photobooth', date: 'Kamis, 26 November 2026 ', done: true },
   { id: 8, title: 'GYM Date?', date: 'Belum dijadwalkan', done: false },
   { id: 9, title: 'Ke Malang?', date: 'Belum dijadwalkan', done: false },
   { id: 10, title: 'Naik Gunung?', date: 'Belum dijadwalkan', done: false },
@@ -84,8 +84,11 @@ export default function DatingList({ back }) {
     <div className="page dates-page">
       {/* Header */}
       <header className="page-heading">
-        <p className="eyebrow">Daftar perjalanan & impian kita</p>
+        <p className="eyebrow">Chapter 06 · Daftar perjalanan & impian kita</p>
         <h2 className="script hero sm">Dating Wishlist</h2>
+        <p className="chapter-page-subtitle">
+          Petualangan yang menanti untuk kita jelajahi bersama.
+        </p>
       </header>
 
       {/* Progress Card - White & Deep Navy Theme (NO EMOJIS) */}

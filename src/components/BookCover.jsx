@@ -42,6 +42,7 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
   const [focus, setFocus] = useState(false)
   const [phase, setPhase] = useState('idle') // idle -> unlocking -> open
   const busy = useRef(false)
+  const inputRef = useRef(null)
   const shake = useAnimation()
 
   // Ambient floating star sparkles in scene
@@ -72,7 +73,7 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
           rotate: Math.random() * 720 - 360,
           scale: 0.8 + Math.random() * 1.3,
           icon: ['✦', '✧', '•', '⋆', '◇', '○'][Math.floor(Math.random() * 6)],
-          color: ['#ffffff', '#bfdbfe', '#93c5fd', '#60a5fa', '#e2e8f0'][
+          color: ['#ffffff', '#e8e2d7', '#cbd1d7', '#a8844d', '#d7dce1'][
             Math.floor(Math.random() * 5)
           ],
           duration: 1.6 + Math.random() * 0.8,
@@ -86,6 +87,7 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
     busy.current = true
 
     if (val === config.password) {
+      inputRef.current?.blur()
       setWrong(false)
       setPhase('unlocking')
 
@@ -124,18 +126,18 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
         <defs>
           <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="30%" stopColor="#dbeafe" />
-            <stop offset="65%" stopColor="#93c5fd" />
-            <stop offset="100%" stopColor="#cbd5e1" />
+            <stop offset="30%" stopColor="#e8e2d7" />
+            <stop offset="65%" stopColor="#cbd1d7" />
+            <stop offset="100%" stopColor="#9aa3ad" />
           </linearGradient>
           <linearGradient id="navyHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3b82f6" />
-            <stop offset="50%" stopColor="#1d4ed8" />
-            <stop offset="100%" stopColor="#0f172a" />
+            <stop offset="0%" stopColor="#33465d" />
+            <stop offset="50%" stopColor="#25364b" />
+            <stop offset="100%" stopColor="#142338" />
           </linearGradient>
-          <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#93c5fd" stopOpacity="0.85" />
-            <stop offset="60%" stopColor="#3b82f6" stopOpacity="0.35" />
+          <radialGradient id="silverGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#d7dce1" stopOpacity="0.72" />
+            <stop offset="60%" stopColor="#a8844d" stopOpacity="0.22" />
             <stop offset="100%" stopColor="#0a192f" stopOpacity="0" />
           </radialGradient>
         </defs>
@@ -292,7 +294,7 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
                   >
                     <path
                       d="M32 58C10 43 4 30 4 20a14 14 0 0 1 28-3 14 14 0 0 1 28 3c0 10-6 23-28 38Z"
-                      fill="url(#blueGlow)"
+                      fill="url(#silverGlow)"
                       stroke="url(#silverGrad)"
                       strokeWidth="1.8"
                     />
@@ -344,6 +346,7 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
                   >
                     <label className="bk-code-row" aria-label="Masukkan tanggal rahasia">
                       <input
+                        ref={inputRef}
                         className="bk-real-input"
                         value={val}
                         autoFocus
@@ -412,7 +415,11 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
                           stroke="currentColor"
                           strokeWidth="2.2"
                           strokeLinecap="round"
-                          animate={isUnlocking || isOpen ? { y: -4, opacity: 0.8 } : { y: 0 }}
+                          animate={
+                            isUnlocking || isOpen
+                              ? { y: -4, opacity: 0.8 }
+                              : { y: 0, opacity: 1 }
+                          }
                           transition={{ duration: 0.3 }}
                         />
                         <rect x="4.5" y="11" width="15" height="10" rx="3" fill="currentColor" />
@@ -502,4 +509,5 @@ export default function BookCover({ onUnlock, onBeforeUnlock }) {
       </AnimatePresence>
     </div>
   )
+  
 }
