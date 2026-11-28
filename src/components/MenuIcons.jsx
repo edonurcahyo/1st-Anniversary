@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
 const menuItems = [
-  { key: 'beginning', title: 'How It All Began', subtitle: 'Dari sebuah sapaan biasa, menjadi cerita yang luar biasa.', tag: 'Chapter 01', page: 2 },
+  { key: 'beginning', title: 'How It All Began', subtitle: 'Dari sebuah chat biasa, menjadi cerita yang luar biasa.', tag: 'Chapter 01', page: 2 },
   { key: 'letter', title: 'Surat Untukmu', subtitle: 'Kata-kata yang tak sempat terucap lewat lisan.', tag: 'Chapter 02', page: 3 },
-  { key: 'album', title: 'Our Memory Lane', subtitle: 'Momen yang membeku dalam waktu, tersimpan rapi di hati.', tag: 'Chapter 03', page: 4 },
-  { key: 'reasons', title: '100 Reasons Why', subtitle: 'Seribu alasan kecil untuk tetap memilihmu setiap hari.', tag: 'Chapter 04', page: 5 },
+  { key: 'album', title: 'Our Memory Lane', subtitle: 'Momen yang tertangkap kamera, tersimpan selamanya di kenangan.', tag: 'Chapter 03', page: 4 },
+  { key: 'reasons', title: '100 Reasons Why', subtitle: 'Seratus alasan kecil untuk tetap memilihmu setiap hari.', tag: 'Chapter 04', page: 5 },
   { key: 'playlist', title: 'Our Playlist', subtitle: 'Nada yang selalu mengingatkanku padamu.', tag: 'Chapter 05', page: 6 },
-  { key: 'dates', title: 'Dating Wishlist', subtitle: 'Petualangan yang menanti untuk kita jelajahi bersama.', tag: 'Chapter 06', page: 7 },
+  { key: 'dates', title: 'Dating Wishlist', subtitle: 'Banyak hal yang menanti untuk kita jelajahi bersama.', tag: 'Chapter 06', page: 7 },
   { key: 'future', title: 'To The Future', subtitle: 'Mari melangkah lebih jauh, selamanya.', tag: 'Chapter 07', page: 8 },
 ]
 
