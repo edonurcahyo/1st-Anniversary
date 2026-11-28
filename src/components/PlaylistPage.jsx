@@ -51,7 +51,7 @@ export default function PlaylistPage({ tracks, currentTrack, isPlaying, onSelect
       </ol>
 
       <p className="chapter-editor-note">
-        Pilih lagu untuk memutarnya, lalu tambahkan cerita di balik setiap nada.
+        Pilih lagu untuk memutarnya
       </p>
       <button type="button" className="back-menu-btn" onClick={back}>
         Kembali ke Daftar Isi

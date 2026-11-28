@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import BookCover from './components/BookCover'
 import CounterPage from './components/CounterPage'
@@ -29,6 +29,10 @@ export default function App() {
     const timer = setTimeout(() => setLoading(false), 1700)
     return () => clearTimeout(timer)
   }, [])
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [view])
 
   // Dipanggil BookCover saat buku berhasil dibuka.
   // Catatan: play() sebaiknya dipicu dari event klik user agar tidak diblokir.
@@ -104,7 +108,12 @@ export default function App() {
       {view !== 'album' && view !== 'support' && view !== 'home' && <Petals />}
 
       {view !== 'cover' && (
-        <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} isHome={view === 'home'} />
+        <MusicPlayer
+          isPlaying={isPlaying}
+          onToggle={toggleMusic}
+          isHome={view === 'home'}
+          isFuture={view === 'future'}
+        />
       )}
 
       <AnimatePresence mode="wait">

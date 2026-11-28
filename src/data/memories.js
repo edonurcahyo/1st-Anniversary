@@ -28,7 +28,7 @@ export const memories = [
     src: '/images/memories/pic4.jpg', 
     date: '14 November 2026', 
     caption: 'Foto bareng sama keluargaku', 
-    description: 'Lucu banget pertama kali ketemu sama keluargaku langsung foto bareng sekeluarga 😭. Udah cocok banget jadi bagian dari keluarga 😭' 
+    description: 'Lucu banget pertama kali ketemu sama keluargaku langsung foto bareng sekeluarga 😭' 
   },
 
   //pic 5

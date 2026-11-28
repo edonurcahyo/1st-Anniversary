@@ -54,13 +54,44 @@ export default function FuturePage({ back }) {
               exit={{ opacity: 0, y: 8 }}
               transition={{ duration: 0.22 }}
             >
-              <p>Untuk kita yang sedang membaca halaman ini,</p>
+              <p><strong>Untuk kita yang sedang membaca halaman ini,</strong></p>
               <p>
                 Semoga kita terus menemukan hal-hal kecil untuk disyukuri,
-                menjaga mimpi yang ingin dicapai bersama, dan memilih satu sama
-                lain dalam setiap bab yang baru.
+                menjaga mimpi yang ingin dicapai bersama, dan tetap memilih satu
+                sama lain dalam setiap bab baru kehidupan kita.
               </p>
-              <p className="future-letter-signoff">Dengan cinta, kita yang hari ini.</p>
+              <p>
+                Ada satu doa yang selalu ingin aku titipkan kepada Allah. Jika
+                memang aku adalah pasangan terbaik untuk Alvi, ya Allah, tolong
+                jaga hati kami berdua. Lancarkanlah segala urusan kami, mudahkan
+                setiap langkah yang sedang dan akan kami lalui.
+              </p>
+              {/* <p>
+                Aku juga berdoa, semoga Alvi bisa menjadi perempuan yang
+                menemaniku di setiap langkah kehidupan. Seseorang yang bisa aku
+                bahagiakan, aku jaga, aku lindungi, dan aku sayangi sampai akhir
+                nanti.
+              </p> */}
+              <p>
+                Jika memang dia adalah takdirku, jangan biarkan kami
+                saling kehilangan. Bimbinglah kami agar selalu bisa saling
+                memahami, menguatkan, memaafkan, dan memperjuangkan satu sama
+                lain. Semoga apa pun yang sedang kami bangun hari ini bisa terus
+                tumbuh menjadi sesuatu yang indah di masa depan.
+              </p>
+              <p>
+                Dan jika suatu hari nanti kita membaca kembali halaman ini,
+                semoga kita masih bersama, dengan senyum yang sama, cinta yang
+                semakin dewasa, serta lebih banyak cerita yang telah kita lalui
+                berdua.
+              </p>
+              <p><strong>Aamiin ya Rabbal 'alamin.</strong></p>
+              <p className="future-letter-signoff">
+                Dengan harapan dan doa,
+                <br />
+                <strong>kita yang hari ini.</strong>{' '}
+                <span aria-hidden="true">♡</span>
+              </p>
             </motion.div>
           )}
         </AnimatePresence>

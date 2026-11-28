@@ -127,5 +127,5 @@ export const reasonsClosing = {
     'Dan setiap harinya, selalu ada hal baru yang membuatku semakin jatuh cinta kepadamu.',
   ],
   signoff:
-    'Terima kasih sudah hadir di hidupku. Aku akan selalu bersyukur karena bisa mengenal, mencintai, dan menjalani banyak cerita bersamamu. Aku sayang kamu, hari ini, besok, dan seterusnya. ♡',
+    'Terima kasih sudah hadir di hidupku. Aku akan selalu bersyukur karena bisa mengenal, mencintai, dan menjalani banyak cerita bersamamu. Aku sayang cewekuu, hari ini, besok, dan seterusnya. ♡',
 }

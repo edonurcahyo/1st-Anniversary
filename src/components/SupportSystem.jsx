@@ -62,7 +62,6 @@ export default function SupportSystem({ back }) {
                 />
               </button>
             </div>
-            <figcaption className="script date">{s.caption}</figcaption>
           </motion.figure>
         ))}
       </div>
@@ -98,7 +97,6 @@ export default function SupportSystem({ back }) {
                 ×
               </button>
               <img src={selected.src} alt={selected.caption} decoding="async" />
-              <figcaption>{selected.caption}</figcaption>
             </motion.figure>
           </motion.div>
         )}

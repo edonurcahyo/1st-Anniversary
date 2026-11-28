@@ -73,7 +73,7 @@ export default function MemoriesAlbum({ back, next }) {
           <p className="eyebrow">Chapter 03 · Koleksi kenangan kita</p>
           <h2 className="script hero sm">Our Memory Lane</h2>
           <p className="chapter-page-subtitle">
-            Momen yang membeku dalam waktu, tersimpan rapi di hati.
+            Momen yang tertangkap kamera, tersimpan selamanya di kenangan.
           </p>
         </header>
 
