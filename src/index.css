@@ -1086,7 +1086,7 @@ button.ghost, .nav-arrow, .text-button {
 
 /* Reasons Flip Cards */
 .flips { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1.1rem; width: 100%; perspective: 1200px; }
-.flip { height: 170px; padding: 0; background: none; box-shadow: none; }
+.flip { height: 190px; padding: 0; background: none; box-shadow: none; }
 .flip:hover:not(:disabled) { box-shadow: none; }
 .flip-in { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
 .face {
@@ -1105,7 +1105,32 @@ button.ghost, .nav-arrow, .text-button {
 }
 .front { background: linear-gradient(145deg, #33465d, #142338); color: #fffdf8; }
 .front span { font-size: 1.8rem; }
-.back { transform: rotateY(180deg); background: var(--paper); color: var(--ink); font-family: Caveat, cursive; font-size: 1.35rem; line-height: 1.35; }
+.back { transform: rotateY(180deg); background: var(--paper); color: var(--ink); font-family: Caveat, cursive; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.35; }
+.reasons-back-btn { align-self: flex-start; }
+.reasons-closing {
+  width: 100%;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(168, 132, 77, 0.36);
+  color: var(--ink);
+  font-family: 'Cormorant Infant', serif;
+  text-align: left;
+}
+.reasons-closing h3 {
+  margin: 0 0 0.85rem;
+  color: var(--gold-deep);
+  font-size: clamp(1.45rem, 4vw, 1.7rem);
+  text-align: center;
+}
+.reasons-closing p {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.1rem, 3vw, 1.25rem);
+  line-height: 1.65;
+}
+.reasons-closing .reasons-closing-signoff {
+  margin-top: 1.25rem;
+  color: var(--gold-deep);
+  text-align: center;
+}
 .music { position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 40; width: 50px; height: 50px; min-height: 50px; padding: 0; }
 
 /* ==========================================================================
