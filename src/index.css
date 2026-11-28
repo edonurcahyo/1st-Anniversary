@@ -1107,9 +1107,16 @@ button.ghost, .nav-arrow, .text-button {
 .front span { font-size: 1.8rem; }
 .back { transform: rotateY(180deg); background: var(--paper); color: var(--ink); font-family: Caveat, cursive; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.35; }
 .reasons-back-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
   width: 100%;
   justify-content: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(168, 132, 77, 0.28);
+  background: rgba(253, 251, 247, 0.97);
+  box-shadow: 0 4px 12px rgba(28, 43, 61, 0.08);
 }
 .reasons-back-btn { min-height: 44px; }
 .reasons-closing {

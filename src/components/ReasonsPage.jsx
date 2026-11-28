@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { reasons, reasonsClosing } from '../data/reasons'
 
@@ -23,6 +23,10 @@ function Card({ text, n }) {
   )
 }
 export default function ReasonsPage({ back }) {
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
+
   return (
     <div className="page wide chapter-content-page reasons-page">
       <div className="reasons-back-bar">
