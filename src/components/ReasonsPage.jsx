@@ -24,10 +24,12 @@ function Card({ text, n }) {
 }
 export default function ReasonsPage({ back }) {
   return (
-    <div className="page wide chapter-content-page">
-      <button type="button" className="back-menu-btn reasons-back-btn" onClick={back}>
-        Kembali ke Daftar Isi
-      </button>
+    <div className="page wide chapter-content-page reasons-page">
+      <div className="reasons-back-bar">
+        <button type="button" className="back-menu-btn reasons-back-btn" onClick={back}>
+          Kembali ke Daftar Isi
+        </button>
+      </div>
 
       <header className="page-heading">
         <p className="eyebrow">Chapter 04 · Hal-hal yang kusayang</p>
