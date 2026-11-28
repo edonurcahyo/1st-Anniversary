@@ -33,6 +33,7 @@ export default function PlaylistPage({ tracks, currentTrack, isPlaying, onSelect
               <motion.button
                 type="button"
                 className={`playlist-track${isCurrent ? ' is-current' : ''}`}
+                aria-label={`${isCurrent && isPlaying ? 'Jeda' : 'Putar'} ${track.title}`}
                 aria-pressed={isCurrent && isPlaying}
                 onClick={() => onSelectTrack(track)}
                 whileTap={{ scale: 0.99 }}
@@ -40,7 +41,7 @@ export default function PlaylistPage({ tracks, currentTrack, isPlaying, onSelect
                 <span className="playlist-track-number">{String(index + 1).padStart(2, '0')}</span>
                 <span className="playlist-track-copy">
                   <strong>{track.title}</strong>
-                  <small>{isCurrent ? (isPlaying ? 'Sedang diputar' : 'Dipilih · tekan untuk putar') : 'Putar lagu'}</small>
+                  <small>{isCurrent ? (isPlaying ? 'Sedang diputar · tekan untuk jeda' : 'Dipilih · tekan untuk putar') : 'Putar lagu'}</small>
                 </span>
                 <span className="playlist-track-action" aria-hidden="true">{isCurrent && isPlaying ? 'Ⅱ' : '▶'}</span>
               </motion.button>

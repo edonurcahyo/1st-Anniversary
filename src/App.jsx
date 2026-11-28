@@ -70,11 +70,14 @@ export default function App() {
 
   const selectTrack = async (track) => {
     if (!audioRef.current) return
-    if (currentTrack.id !== track.id) {
-      audioRef.current.pause()
-      audioRef.current.src = track.src
-      setCurrentTrack(track)
+    if (currentTrack.id === track.id) {
+      await toggleMusic()
+      return
     }
+
+    audioRef.current.pause()
+    audioRef.current.src = track.src
+    setCurrentTrack(track)
 
     try {
       await audioRef.current.play()
